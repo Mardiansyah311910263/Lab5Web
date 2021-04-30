@@ -144,6 +144,44 @@ Seleksi kondisi (if..else)
 ![p 5 7](https://user-images.githubusercontent.com/81758407/116444347-d5b9c780-a87e-11eb-8224-1e93b0ed757e.PNG)
 ![p 5 8](https://user-images.githubusercontent.com/81758407/116444340-d3f00400-a87e-11eb-97f7-a4bf2a8eb12e.PNG)
 Penggunaan operator switch untuk seleksi kondisi
+```
+<html>
+<head>
+    <title>contoh program javascript</title>
+
+    <script language = "javascript">
+    function test ()
+    {
+        vall=window.prompt("input nilai (1-5):")
+        switch (vall)
+        {
+            case "1" :
+                document.write("bilangan satu")
+                break
+            case "2" :
+                document.write("bilangan dua")
+                break
+            case "3" :
+                document.write("bilangan tiga")
+                break
+            case "4" :
+                document.write("bilangan empat")
+                break
+            case "5" :
+                document.write("bilangan lima")
+                break
+            default :
+                document.write("bilangan lainnya")
+        }
+    }
+    </script>
+</head>
+<body>
+    <input type="button" name="button1" value="switch" onclick=test()>
+</body>
+</html>
+```
+
 
 
 
