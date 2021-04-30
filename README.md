@@ -181,7 +181,103 @@ Penggunaan operator switch untuk seleksi kondisi
 </body>
 </html>
 ```
+![p 5 9](https://user-images.githubusercontent.com/81758407/116697371-4da60000-a9ed-11eb-84ac-a8fa6df0d92c.PNG)
+![p 5 10](https://user-images.githubusercontent.com/81758407/116697398-5696d180-a9ed-11eb-8990-44a98d81f2f3.PNG)
+## Pembuatan Form
+Form Input
+```
+<html>
+<head>
+    <script language = "javascript">
+    function test ()
+    {
+        var val1=document.kirim.T1.value
+        if (val1%2==0)
+            document.kirim.T2.value="bilangan genap"
+        else
+            document.kirim.T2.value="bilangan ganjil"
+    }
+    </script>
+</head>
+<body>
+    <form method="POST" name="kirim">
+        <p>BIL <input type="text" name="T1" size="20">
+        MERUPAKAN BIL <input type="text" name="T2" size="20"></p>
+        <p><input type="button" value="TEBAK" name="B1" onclick=test()></p>
+    </form>
+</body>
+</html>
+```
+![p 5 11](https://user-images.githubusercontent.com/81758407/116698692-d96c5c00-a9ee-11eb-845f-dadf80fe079b.PNG)
+Form Button.
+```
+<html>
+<head>
+    <title>objek document</title>
+</head>
+<body>
+    <script language="javascript">
+    <!--
+    function ubahWarnaLB(warna) {
+        document.bgColor = warna;
+    }
+    function ubahWarnaLD(warna) {
+        document.fgColor = warna; 
+    }
+    //-->
+    </script>
 
-
-
+    <h1>tes</h1>
+    <form>
+        <input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('GREEN')">
+        <input type="button" value="Latar Belakang Putih" onclick="ubahWarnaLB('WHITE')">
+        <input type="button" value="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+        <input type="button" value="Teks Biru" onclick="ubahWarnaLD('BLUE')">
+    </form>
+    <script language="javascript">
+    <!--
+    document.write("Dimodifikasi terakhir pada " +
+    document.lastModified);
+    //-->
+    </script>
+</body>
+</html>
+```
+![p 5 12](https://user-images.githubusercontent.com/81758407/116700714-484ab480-a9f1-11eb-992c-f44900999f68.PNG)
+## HTML DOM
+Pilihan menggunakan checkBox dengan perhitungan otomatis
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Daftar Menu</title>
+    <script>
+        function hitung(ele) {
+            var total = document.getElementById('total').value;
+                total = (total ? parseInt(total) : 0);
+            var harga = 0;
+            if (ele.checked) {
+                harga = ele.value;
+                total += parseInt(harga);
+            } else {
+                harga = ele.value;
+                if (total > 0)
+                    total -= parseInt(harga);
+            }
+            document.getElementById('total').value = total;
+        }
+    </script>
+</head>
+<body>
+    <h1>Daftar Menu Makanan</h1>
+    <label><input type="checkbox" value="5000" id="menu1" onclick="hitung(this);" /> Ayam Goreng Rp. 5.000</label><br/>
+    <label><input type="checkbox" value="500" id="menu2" onclick="hitung(this);" /> Tempe Goreng Rp. 5.00</label><br/>
+    <label><input type="checkbox" value="2500" id="menu3" onclick="hitung(this);" /> Telur Dadar Rp. 2.500</label><br/>
+    <strong>Total Bayar: Rp. <input id="total" type="text" /></strong>
+</body>
+</html>
+```
+![p 5 13](https://user-images.githubusercontent.com/81758407/116704062-2f440280-a9f5-11eb-8360-762e6f90ceba.PNG)
+## Pertanyaan dan Tugas
+1. Buat script untuk melakukan validasi pada isian form.
 
