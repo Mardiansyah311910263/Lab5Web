@@ -280,4 +280,124 @@ Pilihan menggunakan checkBox dengan perhitungan otomatis
 ![p 5 13](https://user-images.githubusercontent.com/81758407/116704062-2f440280-a9f5-11eb-8360-762e6f90ceba.PNG)
 ## Pertanyaan dan Tugas
 1. Buat script untuk melakukan validasi pada isian form.
-
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validasi</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        function validasiForm() {
+            var nama = document.getElementById('nama').value;
+            var email = document.getElementById('email').value;
+            var alamat = document.getElementById('alamat').value;
+            if (nama != "" && email != "" && alamat !="") {
+                return true;
+            } else {
+                alert('Isi alamat anda dengan lengkap !');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Form Validasi</h1>
+    </header>
+   <div class="login">
+       <form action="home.html" method="post" onsubmit="return validasiForm()">
+        <fieldset>
+            <legend>Daftar</legend>
+            <div>
+                <label>Nama Lengkap :</label>
+                <input type="text" name="nama" id="nama" />
+            </div>
+            <div>
+                <label>Email :</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label>Alamat :</label>
+                <textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Daftar" class="tombol">
+            </div>
+        </fieldset>
+    </form>
+   </div>
+</body>
+</html>
+```
+Buat file baru dengan nama home.html
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-eidth, initial-scale=1,0">
+        <title>Home</title>
+        <link role="stylesheet" href="stylee.css">
+        <script lang="javascript">
+            function pesan() {
+                alert ("Selamat datang")
+            }
+        </script>
+    </head>
+    <body onload=pesan()>    
+        <center><h1>Terimakasih telah mendaftar!!!</h1></center>
+    </body>
+</html>
+```
+Tambahkan css
+```
+body {
+    background: darkslategray;
+    font-family: sans-serif;
+    padding: 200px;
+    }
+header {
+    min-height: 80px;
+    }
+h1 {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    }
+h1 i {
+    color:#6d6a6b;
+    }
+h2 {
+    color: khaki;
+    }
+.loading {
+    padding: 1em;
+    margin: 2em auto;
+    width: 17em;
+    background: lightslategray;
+    border-radius: 3px;
+    }
+label {
+    font-size: 10pt;
+    color: lightsteelblue;
+    }
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 8px;
+    width: 95%;
+    background: lightgray;
+    border: 0;
+    font-size: 10pt;
+    margin: 6px 0px;
+    }
+.tombol {
+    background: white;
+    color: rgb(2, 2, 2);
+    border: 0;
+    padding: 5px 8px;
+    }
+    
+```
+![p 5 14](https://user-images.githubusercontent.com/81758407/116764896-d7d18100-aa4c-11eb-8172-f455391254e9.PNG)
